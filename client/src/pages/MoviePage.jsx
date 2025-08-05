@@ -46,8 +46,8 @@ const MoviesPage = () => {
   }
 
   return (
-    <div className="flex">
-      <div className="p-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 flex-1">
+    <div className="no-scrollbar">
+      <div className="flex flex-wrap justify-center gap-6">
         {movies.map((media) => (
             <MediaCard key={media.id} media={media} type="movie" />
         ))}

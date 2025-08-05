@@ -34,7 +34,7 @@ const Home = () => {
   return (
     <div className="bg-[#121212] min-h-screen text-white">
       <div className="flex">
-        <main className="flex-1 p-4 overflow-x-hidden">
+        <main className="flex-1 p-4 overflow-x-auto">
           <HeroBanner />
           <CategoryRow title="Trending Now" movies={trending} />
           <CategoryRow title="Top Rated" movies={topRated} />

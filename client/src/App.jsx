@@ -21,7 +21,7 @@ const App = () => {
         {/* Sidebar + Main content */}
         <div className="flex flex-1">
           {sidebarOpen && <Sidebar />}
-          <main className="flex-1 overflow-auto bg-[#121212]">
+          <main className="flex-1 overflow-auto pt-25 no-scrollbar bg-[#121212]">
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/info/:media/:id" element={<MediaInfo />} />

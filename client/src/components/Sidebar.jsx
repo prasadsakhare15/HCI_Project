@@ -28,7 +28,7 @@ const Sidebar = ({ onGenreSelect }) => {
   }, [location.pathname])
 
   return (
-    <aside className="w-64 bg-[#1a1a1a] text-white p-4">
+    <aside className="w-64 h-full fixed z-1 bg-[#1a1a1a] text-white p-4  flex flex-col justify-center">
       <h2 className="text-xl font-bold mb-4">Genres</h2>
       <ul className="space-y-2">
         {genres.map(genre => (

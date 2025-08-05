@@ -15,21 +15,34 @@ const HeroBanner = () => {
     }
     fetchTrending()
   }, [])
+  useEffect(() => {
+    const fetchTrailer = async () => {
+      const res=await axios.get(`${BASE_URL}/movie/${movie.id}/videos?api_key=${API_KEY}`)
+    }
+  },[])
 
   if (!movie) return null
 
   return (
-    <section
-      className="relative w-full h-[400px] mb-8 rounded-xl overflow-hidden bg-cover bg-center"
-      style={{ backgroundImage: `url(https://image.tmdb.org/t/p/original${movie.backdrop_path})` }}
-    >
+    <section className="relative w-full h-[400px] mb-8 rounded-xl overflow-hidden bg-cover bg-center">
+      
       <div className="absolute inset-0 bg-gradient-to-r from-black to-transparent p-6 flex flex-col justify-end">
-        <h1 className="text-3xl font-bold mb-2">{movie.title}</h1>
+        {/* <h1 className="text-3xl font-bold mb-2">{movie.title}</h1>
         <p className="max-w-xl text-gray-300 line-clamp-3">{movie.overview}</p>
         <div className="mt-4">
           <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-500">▶ Play Trailer</button>
-        </div>
+        </div> */}
+        <iframe
+          className='w-full h-full'
+          src={`https://www.youtube.com/embed/dQw4w9WgXcQ`}
+          title="Trailer"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+      ></iframe>
       </div>
+
+
     </section>
   )
 }

@@ -13,13 +13,14 @@ const Navbar = ({toggleSidebar}) => {
       setSearch('')
     }
   }
+  
   return (
-    <nav className="sticky top-0 z-50 bg-[#1a1a1a] text-white h-16 flex items-center px-6 shadow-md">
+    <nav className="fixed top-0 z-50 w-full bg-[#1a1a1a] text-white h-20 flex gap-6 justify-center items-center  px-6 shadow-md">
       
       <button onClick={toggleSidebar} className="text-xl">&#9776;</button>
 
-      <div className="text-xl font-bold mr-10">CineScope</div>
-      <div className="flex gap-6">
+      <div className="text-xl font-bold mr-10">CineKEEDA</div>
+      <div className="flex gap-12 grow justify-center text-xl ">
         <a href="/movies" className="hover:text-blue-400">Movies</a>
         <a href="/tv" className="hover:text-blue-400">TV Shows</a>
         <a href="#" className="hover:text-blue-400">Upcoming</a>
